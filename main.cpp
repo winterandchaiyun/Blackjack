@@ -60,14 +60,7 @@ float deal(){
 bool check(){
     char willing[20];                        //use character string in case of repetitive reminding
     int except=1;
-    /*while(true){
-        cin >> willing;
-        if ( (strcmp(willing,"N")==0) || (strcmp(willing,"n")==0) ) return false;
-        else if ((strcmp(willing,"y")==0) || (strcmp(willing,"Y")==0)) return true;
-             else{
-                cout << "Please input the proper data(y/n):";
-                continue; }                           //ensure the answer to be y/Y/n/N
-    }*/
+
     try{
         cin >> willing;
         if ( (strcmp(willing,"N")==0) || (strcmp(willing,"n")==0) ) return false;
@@ -84,7 +77,7 @@ bool check(){
 //effect:to give the rules and judge who wins
 int judge(){
     int i,j;
-    float manSum,comSum;
+    float manSum,comSum;                              //the sum of man's point,the sum of computer's point
     srand(time(NULL));
 
     cout << "Here are your cards:" <<endl;
